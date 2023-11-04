@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Rockwell", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: #87CEEB;
+            padding: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #87CEEB;
+        }
+
+        main {
+            padding: 0;
+            text-align: center;
+        }
+
+        .hero, .goal, .work, .contact {
+            background: #87CEEB url('your-background-image.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .get-started-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #006494;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .get-started-button:hover {
+            background-color: #003f66;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with any PDF</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your own stylesheet if needed -->
+</head>
+<body class="w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="flex flex-col items-center text-center">
+            <div class="flex items-center">
+                <h1 class="mr-3 text-5xl font-semibold">Chat with any PDF</h1>
+            </div>
+            <p class="max-w-xl mt-1 text-lg text-slate-600">
+                Give file
+            </p>
+            <div class="w-full mt-4">
+                <form method="post" enctype="multipart/form-data" id="uploadForm">
+                    <input type="file" name="file" id="fileInput" accept="video/*">
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1140.0.min.js"></script>
+<script src="../lib/s3.js"></script>
+
