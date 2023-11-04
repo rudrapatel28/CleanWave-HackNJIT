@@ -3,6 +3,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 
   const file = document.getElementById('fileInput').files[0];
   const bucketName = 'cleanwave-hacknjit';
+  this.reset(); // reset the form
 
   const params = {
       Bucket: bucketName,
@@ -22,6 +23,8 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
       if (err) {
           console.error('Error uploading PDF:', err);
       } else {
+          selectedFile.textContent = `File Uploaded Successfully! Thank you for helping clean our oceans :)`;
+          document.getElementById('uploadButton').style.display = 'none';
           console.log('PDF uploaded successfully:', data);
       }
   });

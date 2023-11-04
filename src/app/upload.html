@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
+
+
+        /* Hide the file input */
+        #fileInput {
+            display: none;
+        }
+        form{
+            margin-bottom: 20px; /* add a little spacing between the bottom of the form and the file info */
+        }
+
+
+        
         /* Reset some default styles */
         body, h1, h2, h3, p {
             margin: 0;
@@ -42,7 +54,7 @@
             text-align: center;
         }
 
-        .hero, .goal, .work, .contact {
+        body {
             background: #87CEEB url('your-background-image.jpg') no-repeat center center;
             background-size: cover;
             padding: 100px 0;
@@ -55,12 +67,12 @@
             margin-top: 10px;
         }
 
-        p {
+        p,div[id="selectedfile"] {
             font-size: 18px;
             margin-top: 20px;
         }
 
-        .get-started-button {
+        input[type="submit"],.custom-upload-btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #006494;
@@ -70,7 +82,7 @@
             margin-top: 20px;
         }
 
-        .get-started-button:hover {
+        input[type="submit"]:hover,.custom-upload-btn:hover {
             background-color: #003f66;
         }
     </style>
@@ -84,21 +96,37 @@
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div class="flex flex-col items-center text-center">
             <div class="flex items-center">
-                <h1 class="mr-3 text-5xl font-semibold">Chat with any PDF</h1>
+                <h1 class="mr-3 text-5xl font-semibold">Show us how you're saving the oceans!</h1>
             </div>
             <p class="max-w-xl mt-1 text-lg text-slate-600">
-                Give file
+                Please upload your file below (must be a video)
             </p>
             <div class="w-full mt-4">
                 <form method="post" enctype="multipart/form-data" id="uploadForm">
+                    <label for="fileInput" class="custom-upload-btn">Browse</label>
                     <input type="file" name="file" id="fileInput" accept="video/*">
-                    <input type="submit" value="Upload">
-                </form>
+                    <input type="submit" value="Upload" id="uploadButton" style="display:none;">
+                </form>   
+                <div> </div>
+                <div id="selectedFile"></div>             
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    document.getElementById('fileInput').addEventListener('change', function() {
+    // Check if a file is selected
+    if (this.files && this.files[0]) {
+        const selectedFile = document.getElementById('selectedFile');
+        selectedFile.textContent = `Selected File: ${this.files[0].name}`;
+        document.getElementById('uploadButton').style.display = 'block';
+    }
+    else{
+        document.getElementById('uploadButton').style.display = 'none';
+    }
+});
+</script>
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1140.0.min.js"></script>
 <script src="../lib/s3.js"></script>
 
