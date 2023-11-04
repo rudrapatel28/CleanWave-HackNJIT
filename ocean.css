@@ -1,0 +1,191 @@
+/* Reset and base styles */
+* {
+    font-family: Rockwell;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.social-media {
+    margin: 0 auto 0 50px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.social-media a:hover {
+    background: #191970;
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.social-media a:hover i {
+    color: #ADD8E6;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner and slider styles with a common background image and blur */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.slide .left-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.left-info .penetrate-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    color: #191970;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.left-info .content {
+    position: absolute;
+    bottom: 20%;
+    left: 55%;
+    color: #191970;
+}
+
+content h3 {
+    font-size: 20px;
+}
+
+content p {
+    font-size: 16px;
+    margin: 10px 0 15px;
+}
+
+.sign-up-button, .log-in-button {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #191970;
+    border: 2px solid #191970;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sign-up-button:hover, .log-in-button:hover {
+    background: transparent;
+    color: #191970;
+}
+
+.slide .right-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-info h1 {
+    font-size: 150px;
+    color: #191970;
+}
+
+/* Section styles with a common background image and blur */
+.goal, .work, .faq {
+    background:#ADD8E6;
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    text-align: center;
+}
+
+.goal h1, .work h1, .faq h1 {
+    font-size: 24px;
+    color: #191970;
+    margin-bottom: 20px;
+}
+
+.goal p, .work p, .faq p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.faq-item{
+    color:#191970;
+
+}
