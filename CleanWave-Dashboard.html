@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanWave-Dashboard</title>
+  <link rel="stylesheet" href="oceandashboard.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <nav class="navbar">
+    <a href="Clean">Dr.Clean's Trivia</a>
+    <a href="#goal">Store</a>
+    <a href="#work">Home</a>
+    <a href="CleanWave.html">Logout</a>
+  </nav>
+</header>
+
+<div class="profile-card">
+  <div class="image">
+    <img src="profilepic.png" alt="" class="profile-img">
+    <img src="background.jpg" alt="" class="background-img">
+  </div>
+  <div class="text-data">
+    <span class="name">Dashboard</span>
+    <span class="name">Your Information:</span>
+  </div>
+  <div class="analytics">
+    <div class="data">
+      <i class='bx bx-wallet-alt'></i>
+      <span class="number">100k</span>
+    </div>
+  </div>
+</div>
+
+<script>
+    // Get a reference to the logout button by its id
+    const logoutButton = document.getElementById("logout-button");
+
+    // Add a click event listener to the button
+    logoutButton.addEventListener("click", function() {
+      // Redirect the user to CleanWave.html
+      window.location.href = "CleanWave.html";
+    });
+</script>
+</body>
+</html>
