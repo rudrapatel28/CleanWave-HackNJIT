@@ -1,26 +1,100 @@
 <!DOCTYPE html>
-<section class="banner">
-    <div class="slider">
-        <div class="slide">
-            <img src="background.jpg" alt="">
-            <div class="left-info">
-                <div class="penetrate-blur" id="penetrate">
-                </div>
-            </div>
-            <div class="right-info">
-            </div>
-        </div>
-        <div class="navigation">
-            <span class="prev-btn"></span>
-            <span class="next-btn"></span>
-        </div>
-    </div>
-</section>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
+    <style>
+        /* Reset and base styles */
+* {
+    font-family: Rockwell;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #191970;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #191970;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #191970;
+    border: 2px solid #191970;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: transparent;
+    color: #191970;
+}
+
+/* Container styles */
+div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 18px;
+    color: #191970;
+}
+/* Container styles */
+div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 18px;
+    color: #191970;
+}
+    </style>
 </head>
 <body>
     <form action="signup.php" method="post">
