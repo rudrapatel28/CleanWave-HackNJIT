@@ -1,0 +1,113 @@
+/* Reset and base styles */
+* {
+    font-family: Rockwell;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: transparent;
+    display: flex;
+    flex-direction: column; /* Added this line */
+    align-items: center; /* Added this line */
+    z-index: 100;
+}
+
+h1 {
+    font-size: 24px;
+    color: #191970;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Added this line */
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 100px; /* Added this line */
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap; /* Added this line */
+    justify-content: center; /* Added this line */
+    margin-bottom: 20px;
+}
+
+.clothes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 10px; /* Added this line */
+    width: 20%; /* Added this line */
+}
+
+.clothes img {
+    width: 100%; /* Replace with your desired width */
+    height: auto; /* Replace with your desired height */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.clothes h3 {
+    font-size: 18px;
+    color: #191970;
+    margin-bottom: 5px;
+}
+
+.clothes p {
+    font-size: 16px;
+    color: #191970;
+    margin-bottom: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #191970;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background: transparent;
+    color: #191970;
+}
