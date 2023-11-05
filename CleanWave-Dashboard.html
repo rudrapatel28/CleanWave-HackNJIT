@@ -11,7 +11,7 @@
 <body>
 <header class="header">
   <nav class="navbar">
-    <a href="Clean">Dr.Clean's Trivia</a>
+    <a href="https://my-ai-i5aj.vercel.app/">Dr.Clean's Trivia</a>
     <a href="#goal">Store</a>
     <a href="#work">Home</a>
     <a href="CleanWave.html">Logout</a>
@@ -33,17 +33,50 @@
       <span class="number">100k</span>
     </div>
   </div>
+
+  <div class="centered-content">
+    <div class="flex-container">
+      <div class="flex-items">
+        <h1 class="title-text">To Upload The Video <i class='bx bxs-down-arrow'></i></h1>
+      </div>
+      <p class="description-text">
+        Please upload your file below (must be a video)
+      </p>
+      <div class="upload-form">
+        <form method="post" enctype="multipart/form-data" id="uploadForm">
+          <input type="file" name="file" id="fileInput" accept="video/*">
+          <input type="submit" value="Upload" id="uploadButton" style="display:none;">
+        </form>
+        <div id="selectedFile"></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
     // Get a reference to the logout button by its id
-    const logoutButton = document.getElementById("logout-button");
+    const <lo></lo>goutButton = document.getElementById("logout-button");
 
     // Add a click event listener to the button
     logoutButton.addEventListener("click", function() {
       // Redirect the user to CleanWave.html
       window.location.href = "CleanWave.html";
     });
+
+    document.getElementById('fileInput').addEventListener('change', function() {
+    // Check if a file is selected
+    if (this.files && this.files[0]) {
+        const selectedFile = document.getElementById('selectedFile');
+        selectedFile.textContent = `Selected File: ${this.files[0].name}`;
+        document.getElementById('uploadButton').style.display = 'block';
+    }
+    else{
+        document.getElementById('uploadButton').style.display = 'none';
+    }
+});
 </script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1140.0.min.js"></script>
+<script src="s3.js"></script>
 </body>
 </html>
