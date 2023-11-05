@@ -1,3 +1,4 @@
+
 <?php
 $envVars = parse_ini_file('../lib/.env'); // Load the .env file
 
@@ -30,7 +31,7 @@ if ($result->num_rows > 0) {
     session_start();
     $_SESSION['email'] = $email;
     echo("WOOT WOOT");
-    header('Location: upload.html'); // Redirect to your dashboard or another page
+    header('Location: ../../CleanWave-Dashboard.html'); // Redirect to your dashboard or another page
 } else {
     echo "Invalid email or password.";
 }
