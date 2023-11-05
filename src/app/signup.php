@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 
 if ($result === TRUE) {
     $_SESSION['email'] = $email;
-    header('Location: upload.html'); // Redirect to a dashboard page
+    header('Location: ../../CleanWave-Dashboard.html'); // Redirect to your dashboard or another page
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
