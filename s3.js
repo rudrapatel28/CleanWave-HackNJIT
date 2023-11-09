@@ -20,8 +20,8 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
   const s3 = new AWS.S3({
       region: "us-east-1",
       credentials: {
-          accessKeyId: '',
-          secretAccessKey: '',
+          accessKeyId: AWS_key,
+          secretAccessKey: AWS_secretKey,
       },
   });
 
