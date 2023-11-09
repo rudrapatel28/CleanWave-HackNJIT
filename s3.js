@@ -1,3 +1,9 @@
+require('dotenv').config();
+
+// Access environment variables like this:
+const AWS_key = process.env.AWS_KEY;
+const AWS_secretKey = process.env.AWS_SECRET;
+
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -14,8 +20,8 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
   const s3 = new AWS.S3({
       region: "us-east-1",
       credentials: {
-          accessKeyId: 'AKIAVGLFEAAQ24Y7AFHZ',
-          secretAccessKey: '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',
+          accessKeyId: '',
+          secretAccessKey: '',
       },
   });
 

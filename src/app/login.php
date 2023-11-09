@@ -1,6 +1,6 @@
 
 <?php
-$envVars = parse_ini_file('../lib/.env'); // Load the .env file
+/*$envVars = parse_ini_file('../lib/.env'); // Load the .env file
 
 if ($envVars !== false) {
     $dbHost = $envVars['DB_HOST'];
@@ -11,8 +11,9 @@ if ($envVars !== false) {
 } else {
     echo "Error loading environment variables.";
 }
+*/
 
-$conn = new mysqli($dbHost, $dbUser, $dbPassword, $dbName, $port);
+$conn = new mysqli('127.0.0.1', 'root', '#White\$Use72', 'cleanwave', '3306');
 if (!$conn) {
     die('Connection failed: ' . mysqli_connect_error());
 }
